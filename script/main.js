@@ -1,3 +1,16 @@
+//function for showing date and time
+function timeDate(){
+    var time = new Date();
+    let daysList = ['Söndag', 'Måndag', 'Tisdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lördag'];
+    let monthsList = ['januari', 'februari', 'mars', 'april', 'maj', 'juni', 'juli', 'augusti', 'september', 'oktober', 'november', 'december'];
+
+    const timeDisplay = document.querySelector('.timeDispaly');
+    timeDisplay.innerHTML = `${time.getHours()} : ${time.getMinutes()}`
+
+    const dateDisplay = document.querySelector('.dateDispaly');
+    dateDisplay.innerHTML = `${daysList[time.getDay()]},&nbsp;${time.getDate()}&nbsp;${monthsList[time.getMonth()]}&nbsp;${time.getFullYear()}`
+};
+
 //function for changing image
 function imageReloader(counter, wallpaper, time){
     var el = document.querySelector('#body');
@@ -9,14 +22,14 @@ function imageReloader(counter, wallpaper, time){
     }
     setTimeout('imageReloader', time);
 };
+
 //get a random number between zero and a length of array
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
-  }
+};
 
 // Make a refreshable background button
 function refreshBackgound(){
-    
     
     //set up variables
     var wallpaper = [];
@@ -42,12 +55,12 @@ function refreshBackgound(){
     refreshBtn.addEventListener('click', event => {
         i = Number(getRandomInt(wallpaper.length));
         //using the reloader function
-        imageReloader(i, wallpaper, time)
-        console.log(i)
-
+        imageReloader(i, wallpaper, time);
     });
-
-    
 };
 
-refreshBackgound()
+
+refreshBackgound();
+setInterval(function() {
+    timeDate();
+  }, 1000);
