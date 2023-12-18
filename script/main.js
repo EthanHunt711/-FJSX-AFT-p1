@@ -9,12 +9,16 @@ function imageReloader(counter, wallpaper, time){
     }
     setTimeout('imageReloader', time);
 };
-
+//get a random number between zero and a length of array
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
 
 // Make a refreshable background button
 function refreshBackgound(){
+    
+    
     //set up variables
-    var i = 0;
     var wallpaper = [];
     var time = 300;
 
@@ -28,12 +32,15 @@ function refreshBackgound(){
     wallpaper[6] = "url(./img/wallpaper7.jpg)";
     wallpaper[7] = "url(./img/wallpaper8.jpg)";
 
+    //set up the original baclground
+    var el = document.querySelector('#body');
+    el.style.backgroundImage = wallpaper[0];
 
     
-
+    //running the image shuffler function based on the numner of background images
     const refreshBtn = document.querySelector('#backgoundReloadBtn');
     refreshBtn.addEventListener('click', event => {
-        i += 1
+        i = Number(getRandomInt(wallpaper.length));
         //using the reloader function
         imageReloader(i, wallpaper, time)
         console.log(i)
