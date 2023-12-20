@@ -59,8 +59,35 @@ function refreshBackgound(){
     });
 };
 
+function slideShow(){
+    //target the slider
+    const tileSlider = document.querySelector('.tileSlider');
+    //target the left and right arrows
+    const leftArrow = document.querySelector('.leftArrow');
+    const rightArrow = document.querySelector('.rightArrow');
+    
+    //get the number of slides
+    let numberOfSlides = tileSlider.children.length; 
+
+    // counter for arrows to make stops at both ends
+    let sectionIndex = 0;
+    // listener for clicks and counting right arrow
+    rightArrow.addEventListener('click', function(){
+        sectionIndex = (sectionIndex < (numberOfSlides - 1) ) ? sectionIndex + 1 : (numberOfSlides - 1);
+        tileSlider.style.transform = 'translate(' + (sectionIndex) * -100/numberOfSlides + '%)';    
+    });
+    // listener for clicks and counting left arrow
+    leftArrow.addEventListener('click', function(){
+        sectionIndex = (sectionIndex > 0 ) ? sectionIndex - 1 : 0;
+        tileSlider.style.transform = 'translate(' + (sectionIndex) * -100/numberOfSlides + '%)';    
+    });
+
+    
+};
+
 
 refreshBackgound();
+slideShow();
 setInterval(function() {
     timeDate();
   }, 1000);
