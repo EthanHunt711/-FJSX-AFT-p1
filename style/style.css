@@ -43,11 +43,69 @@ header{
 }
 
 /* Main body style */
+main{
+    margin: 150px auto 0;
+}
 
+.titleText{
+    margin: 0 auto 30px;
+}
+
+.titleText h1{
+    align-items: center;
+    color: #ccc;
+}
+
+.tileSection{
+    width: 90%;
+    margin: 10px 10px;
+}
+
+.mainTiles{
+    border: 2px solid #ccc;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.tileSlider{
+    height: 100%;
+    display: flex;
+    width: 400%;
+    transition: all .4s ease;
+}
+
+.tileSlider section{
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+}
+
+.controls span{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.leftArrow{
+    left: 10px;
+}
+
+.rightArrow{
+    right: 10px;
+}
+
+.controls i{
+    font-size: 40px;
+    color: #ccc;
+}
 
 /* Footer style */
 footer{
-    margin: 80vh auto 60px;
+    margin: 40px auto 60px;
     background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
     width: 200px;
     height: 40px;
