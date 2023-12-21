@@ -1,3 +1,8 @@
+//global variables
+const apiKey = "05d50d1d285e907234859232abcfbeeb";
+const apiUrl ="api.openweathermap.org/data/2.5/forecast?";
+
+
 //function for showing date and time
 function timeDate(){
     var time = new Date();
@@ -59,6 +64,30 @@ function refreshBackgound(){
     });
 };
 
+
+
+
+//function for filling the weather widgit
+function weatherTile(){
+    
+    
+    
+    async function checkWeather(){
+       const response = await fetch(apiUrl + `lat=${lat}&lon=${lon}` + `&appid=${apiKey}`);
+       if (response.ok){
+        var data = await response.json();
+        console.log(data); 
+       } else {
+        console.log(response.status);
+       };
+    };
+    checkWeather();
+};
+
+
+
+
+
 function slideShow(){
     //target the slider
     const tileSlider = document.querySelector('.tileSlider');
@@ -82,11 +111,12 @@ function slideShow(){
         tileSlider.style.transform = 'translate(' + (sectionIndex) * -100/numberOfSlides + '%)';    
     });
 
-    
 };
 
 
+
 refreshBackgound();
+weatherTile();
 slideShow();
 setInterval(function() {
     timeDate();
