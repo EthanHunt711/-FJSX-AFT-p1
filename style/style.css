@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Noto+Sans+Symbols:wght@300&family=Open+Sans:wght@600&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
 
@@ -31,24 +32,29 @@ header{
 }
 
 .dateTimeSummary{
+    width: 100%;
     margin: auto 15px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     color: #000;
-    font-size: 15px;
+    font-size: 19px;
     font-weight: 500;
-    gap: 50px;
+    gap: 30px;
 }
 
 /* Main body style */
 main{
     margin: 150px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .titleText{
     margin: 0 auto 30px;
+    align-items: center;
 }
 
 .titleText h1{
@@ -83,6 +89,7 @@ main{
     background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
 }
 
+
 .controls span{
     position: absolute;
     top: 50%;
@@ -105,13 +112,14 @@ main{
 
 /* Footer style */
 footer{
-    margin: 40px auto 60px;
+    margin: 60px auto;
     background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
     width: 200px;
     height: 40px;
     border-radius: 10px;
     display: flex;
     align-items: center;
+
     
 }
 #backgoundReloadBtn {
@@ -120,6 +128,7 @@ footer{
     background: none;
     margin: auto 1em;
     font-weight: 500;
+    font-size: 15px;
 }
 
 #backgoundReloadBtn i{
