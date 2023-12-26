@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    list-style: none;
 }
 
 #body{
@@ -84,6 +84,7 @@ main{
 .tileSlider section{
     flex-basis: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
@@ -109,6 +110,7 @@ main{
     font-size: 40px;
     color: #ccc;
 }
+
 
 /* Footer style */
 footer{
