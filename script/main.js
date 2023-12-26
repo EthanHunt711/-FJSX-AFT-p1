@@ -10,7 +10,7 @@ function timeDate(){
     let monthsList = ['januari', 'februari', 'mars', 'april', 'maj', 'juni', 'juli', 'augusti', 'september', 'oktober', 'november', 'december'];
 
     const timeDisplay = document.querySelector('.timeDispaly');
-    timeDisplay.innerHTML = `${time.getHours()} : ${time.getMinutes()}`
+    timeDisplay.innerHTML = `${time.getHours()} : ${(time.getMinutes() < 10 ? '0' : '') + time.getMinutes()}`
 
     const dateDisplay = document.querySelector('.dateDispaly');
     dateDisplay.innerHTML = `${daysList[time.getDay()]},&nbsp;${time.getDate()}&nbsp;${monthsList[time.getMonth()]}&nbsp;${time.getFullYear()}`
