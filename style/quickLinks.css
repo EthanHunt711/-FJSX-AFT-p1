@@ -1,0 +1,63 @@
+.links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.linkListElemet{
+    background-color: antiquewhite;
+    margin-top: 1em;
+    border-radius: 6px;
+    width: 300px;
+    height: 50px;
+    align-items: center;
+
+    
+}
+
+.insideDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.favIcon img{
+    width: 40px;
+    height: 40px;
+    margin: .5em;
+}
+
+.insideDiv .favText{
+    text-decoration: none;
+    width: 100px;
+    color: #000;
+}
+
+.insideDiv i{
+    margin-left: 150px;
+    margin-top: -30px;
+    opacity: .2;
+}
+
+.addLink{
+    margin: 30px auto;
+    background-color: antiquewhite;
+    border-radius: 6px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+
+}
+
+.addLink a{
+    text-decoration: none;
+    color: #000;
+}
+
+.addLink i{
+    margin-left: .5em;
+    opacity: .2;
+    
+}
