@@ -1,7 +1,3 @@
-//global variables
-const apiKey = "05d50d1d285e907234859232abcfbeeb";
-const apiUrl ="api.openweathermap.org/data/2.5/forecast?";
-
 
 //function for showing date and time
 function timeDate(){
