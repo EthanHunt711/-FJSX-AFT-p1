@@ -1,0 +1,41 @@
+.todayWeather{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.todayWeather h2{
+ 
+    margin-bottom: .5em;
+    margin-top: 0;
+  
+}
+
+.weatherTile{
+    display: flex;
+    flex-direction: row;
+    background-color: antiquewhite;
+    margin-top: 1em;
+    border-radius: 6px;
+    width: 300px;
+    height: 50px;
+    align-items: center;
+    gap: 1em;
+}
+
+.weatherIcon img{
+    width: 40px;
+    height: 40px;
+    margin: .5em;
+}
+
+.weatherDetails{
+    display: flex;
+    flex-direction: column;
+}
+
+.showWeatherDetails{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
