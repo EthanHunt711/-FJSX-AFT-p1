@@ -7,6 +7,7 @@
     <meta name="description" content="The main page for the dashboard including all relevant data">
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/quickLinks.css">
+    <link rel="stylesheet" href="./style/todayWeather.css">
     <script src="https://kit.fontawesome.com/902fe4d1cd.js" crossorigin="anonymous"></script>
 </head>
 <body id="body">
@@ -29,30 +30,30 @@
                             <ul class="linkList">
                                 <li class="linkListElemet">
                                     <div class="insideDiv">
-                                        <a class="favIcon" href="https://www.google.com/"><img src="./icons/icons8-google.svg" alt="Google Icon"></a>
+                                        <a class="favIcon" href="https://www.google.com/"><img src="./icons/links/icons8-google.svg" alt="Google Icon"></a>
                                         <a class="favText" href="https://www.google.com/">Google</a>
-                                        <i class="fa-solid fa-circle-minus"></i>
+                                        <div class="deleteIcon"><i class="fa-solid fa-circle-minus"></i></div>
                                     </div>
                                 </li>
                                 <li class="linkListElemet">
                                     <div class="insideDiv">
-                                        <a class="favIcon" href="https://www.github.com/"><img src="./icons/icons8-github.svg" alt="Google Icon"></a>
+                                        <a class="favIcon" href="https://www.github.com/"><img src="./icons/links/icons8-github.svg" alt="Google Icon"></a>
                                         <a class="favText" href="https://www.github.com/">GitHub</a>
-                                        <i class="fa-solid fa-circle-minus"></i>
+                                        <div class="deleteIcon"><i class="fa-solid fa-circle-minus"></i></div>
                                     </div>
                                 </li>
                                 <li class="linkListElemet">
                                     <div class="insideDiv">
-                                        <a class="favIcon" href="https://www.notion.so/"><img src="./icons/icons8-notion.svg" alt="Google Icon"></a>
+                                        <a class="favIcon" href="https://www.notion.so/"><img src="./icons/links/icons8-notion.svg" alt="Google Icon"></a>
                                         <a class="favText" href="https://www.notion.so/">Notion</a>
-                                        <i class="fa-solid fa-circle-minus"></i>
+                                        <div class="deleteIcon"><i class="fa-solid fa-circle-minus"></i></div>
                                     </div>
                                 </li>
                                 <li class="linkListElemet">
                                     <div class="insideDiv">
-                                        <a class="favIcon" href="https://www.linkedin.com/"><img src="./icons/icons8-linkedin.svg" alt="Google Icon"></a>
+                                        <a class="favIcon" href="https://www.linkedin.com/"><img src="./icons/links/icons8-linkedin.svg" alt="Google Icon"></a>
                                         <a class="favText" href="https://www.linkedin.com/">LinkedIn</a>
-                                        <i class="fa-solid fa-circle-minus"></i>
+                                        <div class="deleteIcon"><i class="fa-solid fa-circle-minus"></i></div>
                                     </div>
                                 </li>
                             </ul>
@@ -64,6 +65,18 @@
                     </section>
                     <section class="todayWeather">
                         <h2 class="tileTitleText">Dagensväder</h2>
+                        <ul class="weatherTiles">
+                            <li class="weatherTile">
+                                <div class="weatherIcon"><img src="./icons/weather/icons8-sunny-80.png" alt="sunny"></div>
+                                <div class="weatherDetails">
+                                    <div class="showDayName"><h3>Idag</h3></div>
+                                    <div class="showWeatherDetails">
+                                        <h4 class="temperature">-2°C</h4>
+                                        <h4 class="details">solig</h4>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </section>
                     <section class="miscTile">
                         <h2 class="tileTitleText">Dagens agenda</h2>
