@@ -1,18 +1,59 @@
-//function for filling the weather widgit
-function weatherTile(){
+//global variables
+const apiKey = "05d50d1d285e907234859232abcfbeeb";
+
+
+//function for getting users location
+function userCurrentLocationfiveDayForecast(){
+   
+    //get the current location
+    navigator.geolocation.getCurrentPosition( position => {
+        //longtitude
+        const latitude = position.coords.latitude;
+        //latitude
+        const longitude = position.coords.longitude;
+        
+        //make the reverse geolocation url
+        const reverseGeocodingUrl = `http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=1&appid=${apiKey}`;
+        
+        //fetch the data from api for further usage of lat and lon and city name
+        fetch(reverseGeocodingUrl).then(response => response.json()).then(locationData =>{
+            
+            //create the lat and lon and name variables
+            const cityLatitude = locationData[0].lat;
+            const cityLongitude = locationData[0].lon;
+            const cityName = locationData[0].name;
+
+            
+            //create a url for fetching 5day forecast 
+            const weatherForecastUrl = `http://api.openweathermap.org/data/2.5/forecast?lat=${cityLatitude}&lon=${cityLongitude}&appid=${apiKey}&units=metric`
+
+            console.log(weatherForecastUrl)
+            //fetch the data for next 5 days
+            fetch(weatherForecastUrl).then(res => res.json()).then(weatherDetailsData => {
+                weatherDetailsData.list.filter(forecast => {
+                    const forecastDate = new Date(forecast.dt_txt).getDate();
+                    console.log(forecastDate)
+                });
+
+
+            //if data is not retrieved for 5day forecast
+            }).catch(() => alert(`hittade inga information till ${cityName}`))
+        
+        //if data is not retrieved for reverse geolocation
+        }).catch(() => {
+            alert(`Ingen data kunde hämtades till denna plats`);
+        })
+    },
+    //if user does nor permit geolocation
+    error => {
+        if(error.code === error.PERMISSION_DENIED){
+            alert("plats ehörighet inte godkänd. Ändra inställningar för att hämta plats")
+        }
+    }
+    );
     
     
-    
-    async function checkWeather(){
-       const response = await fetch(apiUrl + `lat=${lat}&lon=${lon}` + `&appid=${apiKey}`);
-       if (response.ok){
-        var data = await response.json();
-        console.log(data); 
-       } else {
-        console.log(response.status);
-       };
-    };
-    checkWeather();
 };
 
-weatherTile();
+userCurrentLocationfiveDayForecast();
+
