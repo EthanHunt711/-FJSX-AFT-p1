@@ -38,6 +38,7 @@
     margin-left: 150px;
     margin-top: -30px;
     opacity: .2;
+    cursor: pointer;
 }
 
 .addLink{
@@ -45,6 +46,7 @@
     background-color: antiquewhite;
     border-radius: 6px;
     width: 200px;
+    height: 30px;
     display: flex;
     align-items: center;
     gap: 1em;
@@ -56,8 +58,14 @@
     color: #000;
 }
 
-.addLink i{
+.deleteIcon{
+    margin-top: -30px;
     margin-left: .5em;
+    margin-right: .2em;
+}
+
+.addLink i{
     opacity: .2;
+    cursor: pointer;
     
 }
