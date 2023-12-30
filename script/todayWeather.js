@@ -40,48 +40,48 @@ function userCurrentLocationfiveDayForecast(){
                     
                 });
 
-            console.log(fiveDayForecast)
-            //add content to html
-            eachDayForecast.forEach(weatherDataDeatils => {
+                console.log(fiveDayForecast)
+                //add content to html
+                fiveDayForecast.forEach(weatherDataDeatils => {
 
-                console.log(weatherDataDeatils)
-                //target the ul in html
-                const weatherTiles = document.querySelector('.weatherTiles');
+                    console.log(weatherDataDeatils.weather[0])
+                    //target the ul in html
+                    const weatherTiles = document.querySelector('.weatherTiles');
 
-                //create a list element
-                const weatherTile = document.createElement('li');
-                weatherTile.className = 'weatherTile';
-                weatherTiles.appendChild(weatherTile);
-                
-                //create icon div
-                const weatherIcon = document.createElement('div');
-                weatherIcon.className = 'weatherIcon';
-                const weatherIconImg = document.createElement('img');
-                weatherIconImg.setAttribute('src', `https://openweathermap.org/img/wn/${weatherDataDeatils.weather[0].icon}@2x.png`)
-                weatherIcon.appendChild(weatherIconImg);
-                weatherTile.appendChild(weatherIcon);
+                    //create a list element
+                    const weatherTile = document.createElement('li');
+                    weatherTile.className = 'weatherTile';
+                    weatherTiles.appendChild(weatherTile);
+                    
+                    //create icon div
+                    const weatherIcon = document.createElement('div');
+                    weatherIcon.className = 'weatherIcon';
+                    const weatherIconImg = document.createElement('img');
+                    weatherIconImg.setAttribute('src', `https://openweathermap.org/img/wn/${weatherDataDeatils.weather[0].icon}@2x.png`)
+                    weatherIcon.appendChild(weatherIconImg);
+                    weatherTile.appendChild(weatherIcon);
 
-                //create details for weather list element
-                const weatherDetails = document.createElement('div');
-                weatherTile.appendChild(weatherDetails);
+                    //create details for weather list element
+                    const weatherDetails = document.createElement('div');
+                    weatherTile.appendChild(weatherDetails);
 
-                //date element
-                const showDayName = document.createElement('div');
-                showDayName.className ='showDayName'
-                showDayName.textContent = `<h3>${weatherDataDeatils.dt_txt.split(" ")[0]}</h3>`
-                weatherDetails.appendChild(showDayName);
+                    //date element
+                    const showDayName = document.createElement('div');
+                    showDayName.className ='showDayName'
+                    showDayName.innerHTML = `<h6>${weatherDataDeatils.dt_txt.split(" ")[0]}</h6>`
+                    weatherDetails.appendChild(showDayName);
 
-                const showWeatherDetails = document.createElement('div');
-                showWeatherDetails.className = 'showWeatherDetails';
-                showWeatherDetails.textContent = `<h4   class="temperature">${weatherDataDeatils.main.temp}°C</h4>
-                <h4 class="details">${weatherDataDeatils.weather[0].description}</h4>`
-
-
+                    const showWeatherDetails = document.createElement('div');
+                    showWeatherDetails.className = 'showWeatherDetails';
+                    showWeatherDetails.innerHTML= `<h6   class="temperature">${weatherDataDeatils.main.temp}°C</h6>
+                    <h6 class="details">${weatherDataDeatils.weather[0].description}</h6>`
 
 
 
 
-            });
+
+
+                });
 
 
 
