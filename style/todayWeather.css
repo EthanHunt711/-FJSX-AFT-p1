@@ -15,7 +15,7 @@
 .weatherTile{
     display: flex;
     flex-direction: row;
-    background-color: antiquewhite;
+    background-color: rgb(161, 174, 239);
     margin-top: 1em;
     border-radius: 6px;
     width: 300px;
@@ -31,11 +31,14 @@
 }
 
 .showDayName{
-    font-size: 20px;
+    font-size: 16px;
 }
+
 .weatherDetails{
     display: flex;
     flex-direction: column;
+    gap: 10px;
+
 }
 
 .showWeatherDetails{
@@ -43,4 +46,10 @@
     flex-direction: row;
     gap: 1em;
     font-size: 15px;
+}
+
+
+.temperature,
+.details{
+    background-color: #999898;
 }
