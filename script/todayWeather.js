@@ -25,7 +25,7 @@ function userCurrentLocationfiveDayForecast(){
 
             
             //create a url for fetching 5day forecast 
-            const weatherForecastUrl = `http://api.openweathermap.org/data/2.5/forecast?lat=${cityLatitude}&lon=${cityLongitude}&appid=${apiKey}&units=metric`
+            const weatherForecastUrl = `http://api.openweathermap.org/data/2.5/forecast?lat=${cityLatitude}&lon=${cityLongitude}&appid=${apiKey}&units=metric&lang=sv`
 
             console.log(weatherForecastUrl)
             //fetch the data for next 5 days
@@ -42,9 +42,10 @@ function userCurrentLocationfiveDayForecast(){
 
                 console.log(fiveDayForecast)
                 //add content to html
-                fiveDayForecast.forEach(weatherDataDeatils => {
+                for(var i = 0; i < 3; i++){
+                    var weatherDetail = fiveDayForecast[i]
+                    console.log(weatherDetail);
 
-                    console.log(weatherDataDeatils.weather[0])
                     //target the ul in html
                     const weatherTiles = document.querySelector('.weatherTiles');
 
@@ -57,7 +58,7 @@ function userCurrentLocationfiveDayForecast(){
                     const weatherIcon = document.createElement('div');
                     weatherIcon.className = 'weatherIcon';
                     const weatherIconImg = document.createElement('img');
-                    weatherIconImg.setAttribute('src', `https://openweathermap.org/img/wn/${weatherDataDeatils.weather[0].icon}@2x.png`)
+                    weatherIconImg.setAttribute('src', `https://openweathermap.org/img/wn/${weatherDetail.weather[0].icon}@4x.png`)
                     weatherIcon.appendChild(weatherIconImg);
                     weatherTile.appendChild(weatherIcon);
 
@@ -68,20 +69,61 @@ function userCurrentLocationfiveDayForecast(){
                     //date element
                     const showDayName = document.createElement('div');
                     showDayName.className ='showDayName'
-                    showDayName.innerHTML = `<h6>${weatherDataDeatils.dt_txt.split(" ")[0]}</h6>`
+                    showDayName.innerHTML = `${weatherDetail.dt_txt.split(" ")[0]}`
                     weatherDetails.appendChild(showDayName);
 
                     const showWeatherDetails = document.createElement('div');
                     showWeatherDetails.className = 'showWeatherDetails';
-                    showWeatherDetails.innerHTML= `<h6   class="temperature">${weatherDataDeatils.main.temp}°C</h6>
-                    <h6 class="details">${weatherDataDeatils.weather[0].description}</h6>`
+                    showWeatherDetails.innerHTML= `<div class="temperature">${Math.round(weatherDetail.main.temp)}°C</div>
+                    <div class="details">${weatherDetail.weather[0].description}</div>`
+                    weatherDetails.appendChild(showWeatherDetails)
+
+
+
+
+                };
+
+
+                // fiveDayForecast.forEach(weatherDataDeatils => {
+
+                //     // console.log(weatherDataDeatils.weather[0])
+                //     //target the ul in html
+                //     const weatherTiles = document.querySelector('.weatherTiles');
+
+                //     //create a list element
+                //     const weatherTile = document.createElement('li');
+                //     weatherTile.className = 'weatherTile';
+                //     weatherTiles.appendChild(weatherTile);
+                    
+                //     //create icon div
+                //     const weatherIcon = document.createElement('div');
+                //     weatherIcon.className = 'weatherIcon';
+                //     const weatherIconImg = document.createElement('img');
+                //     weatherIconImg.setAttribute('src', `https://openweathermap.org/img/wn/${weatherDataDeatils.weather[0].icon}@4x.png`)
+                //     weatherIcon.appendChild(weatherIconImg);
+                //     weatherTile.appendChild(weatherIcon);
+
+                //     //create details for weather list element
+                //     const weatherDetails = document.createElement('div');
+                //     weatherTile.appendChild(weatherDetails);
+
+                //     //date element
+                //     const showDayName = document.createElement('div');
+                //     showDayName.className ='showDayName'
+                //     showDayName.innerHTML = `<h6>${weatherDataDeatils.dt_txt.split(" ")[0]}</h6>`
+                //     weatherDetails.appendChild(showDayName);
+
+                //     const showWeatherDetails = document.createElement('div');
+                //     showWeatherDetails.className = 'showWeatherDetails';
+                //     showWeatherDetails.innerHTML= `<div class="temperature">${weatherDataDeatils.main.temp}°C</div>
+                //     <div class="details">${weatherDataDeatils.weather[0].description}</div>`
+                //     weatherDetails.appendChild(showWeatherDetails)
 
 
 
 
 
-
-                });
+                // });
 
 
 
