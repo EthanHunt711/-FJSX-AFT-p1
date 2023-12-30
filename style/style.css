@@ -46,7 +46,8 @@ header{
 
 /* Main body style */
 main{
-    margin: 150px auto 0;
+    margin: 100px auto 0;
+    width: 360px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -70,6 +71,7 @@ main{
 .mainTiles{
     border: 2px solid #ccc;
     height: 400px;
+    width: auto;
     position: relative;
     overflow: hidden;
 }
@@ -96,14 +98,17 @@ main{
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
+    display: none;
 }
 
+
 .leftArrow{
-    left: 10px;
+        left: 10px;
 }
 
 .rightArrow{
     right: 10px;
+    
 }
 
 .controls i{
@@ -111,7 +116,29 @@ main{
     color: #ccc;
 }
 
+.controls ul{
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
 
+.controls ul li{
+    width: 10px;
+    height: 10px;
+    border: 1px solid #333;
+    border-radius: 50px;
+    margin: 10px;
+    background: #333;
+    cursor: pointer;
+}
+
+.controls ul li.selected{
+    background: transparent;
+}
 /* Footer style */
 footer{
     margin: 60px auto;
