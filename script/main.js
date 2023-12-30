@@ -73,6 +73,16 @@ function slideShow(){
 
     // counter for arrows to make stops at both ends
     let sectionIndex = 0;
+
+    //making the indicators work
+    document.querySelectorAll('.controls li').forEach(function(indicator, ind){
+        indicator.addEventListener('click', function(){
+            sectionIndex = ind;
+            document.querySelector('.controls .selected').classList.remove('selected');
+            indicator.classList.add('selected');
+            tileSlider.style.transform = 'translate(' + (sectionIndex) * -100/numberOfSlides + '%)'; 
+        });
+    });
     // listener for clicks and counting right arrow
     rightArrow.addEventListener('click', function(){
         sectionIndex = (sectionIndex < (numberOfSlides - 1) ) ? sectionIndex + 1 : (numberOfSlides - 1);
