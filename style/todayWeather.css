@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     
+    
 }
 
 .todayWeather h2{
@@ -29,6 +30,9 @@
     margin: .5em;
 }
 
+.showDayName{
+    font-size: 20px;
+}
 .weatherDetails{
     display: flex;
     flex-direction: column;
@@ -38,4 +42,5 @@
     display: flex;
     flex-direction: row;
     gap: 1em;
+    font-size: 15px;
 }
