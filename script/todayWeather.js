@@ -1,6 +1,6 @@
 //global variables
 const apiKey = "05d50d1d285e907234859232abcfbeeb";
-
+let daysList = ['söndag', 'måndag', 'tisdag', 'onsdag', 'torsdag', 'fredag', 'lördag'];
 
 //function for getting users location
 function userCurrentLocationfiveDayForecast(){
@@ -27,7 +27,7 @@ function userCurrentLocationfiveDayForecast(){
             //create a url for fetching 5day forecast 
             const weatherForecastUrl = `http://api.openweathermap.org/data/2.5/forecast?lat=${cityLatitude}&lon=${cityLongitude}&appid=${apiKey}&units=metric&lang=sv`
 
-            console.log(weatherForecastUrl)
+            // console.log(weatherForecastUrl)
             //fetch the data for next 5 days
             fetch(weatherForecastUrl).then(res => res.json()).then(weatherDetailsData => {
                 const eachDayForecast = [];
@@ -40,11 +40,11 @@ function userCurrentLocationfiveDayForecast(){
                     
                 });
 
-                console.log(fiveDayForecast)
+                // console.log(fiveDayForecast)
                 //add content to html
                 for(var i = 0; i < 3; i++){
                     var weatherDetail = fiveDayForecast[i]
-                    console.log(weatherDetail);
+                    // console.log(weatherDetail);
 
                     //target the ul in html
                     const weatherTiles = document.querySelector('.weatherTiles');
@@ -69,8 +69,17 @@ function userCurrentLocationfiveDayForecast(){
                     //date element
                     const showDayName = document.createElement('div');
                     showDayName.className ='showDayName'
-                    showDayName.innerHTML = `${weatherDetail.dt_txt.split(" ")[0]}`
+                    //get the name of the day
+                    var dayName = daysList[new Date(weatherDetail.dt_txt.split(" ")[0]).getDay()]
+
+                    showDayName.innerHTML = `${dayName},&nbsp;&nbsp;${weatherDetail.dt_txt.split(" ")[0]}`
                     weatherDetails.appendChild(showDayName);
+
+
+                    
+                    
+
+
 
                     const showWeatherDetails = document.createElement('div');
                     showWeatherDetails.className = 'showWeatherDetails';
