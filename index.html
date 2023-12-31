@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/quickLinks.css">
     <link rel="stylesheet" href="./style/todayWeather.css">
+    <link rel="stylesheet" href="./style/toDoList.css">
+    <link rel="stylesheet" href="./style/noteBook.css">
     <script src="https://kit.fontawesome.com/902fe4d1cd.js" crossorigin="anonymous"></script>
 </head>
 <body id="body">
@@ -81,20 +83,24 @@
                     </section>
                     <section class="miscTile">
                         <h2 class="tileTitleText">Dagens agenda</h2>
-                        <ul class="agendaList">
-
-                        </ul>
+                        <table class="agendaList">
+                            
+                        </table>
                         <div class="inputAgenda">
                             <form>
-                                <label for="date">tid: </label><br>
-                                <input type="time" name="date" id="date" value="12:40">
-                                <label for="priority">prioritiet: </label><br>
-                                <input type="number" name="priority" id="priority" value="1">
-                                <label for="toDo">Ämne: </label><br>
-                                <input type="text" name="toDo" id="toDo" value="ring ekonomibyrå">
-                                <button type="button">Lägg till</button>
+                                <label for="date">tid: </label>
+                                <input type="time" name="date" id="date" placeholder="12:40">
+                                <label for="priority">prioritiet: </label>
+                                <select name="priority" id="priority" required>
+                                    <option selected="selected">hög</option>
+                                    <option>medel</option>
+                                    <option>låg</option>
+                                </select>
+                                <label for="toDo">Ämne: </label>
+                                <input type="text" name="toDo" id="toDo" placeholder="ring ekonomibyrå" required>
+                                
                             </form>
-
+                            <button type="button" id="formBtn">Lägg till</button>
                         </div>
                     </section>
                     <section class="noteBook">
