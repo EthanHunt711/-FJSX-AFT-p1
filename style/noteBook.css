@@ -1,0 +1,14 @@
+#notebookText{
+    border: none;
+    border-radius: 4px;
+    width: 300px;
+    height: 80%;
+    transition: border-color 0.3s ease;
+    outline: none;
+    padding: .5em;
+}
+
+#notebookText:focus{
+    background-color: #333;
+    color: #fff;
+}

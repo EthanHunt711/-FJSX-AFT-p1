@@ -2,7 +2,7 @@
 //function for showing date and time
 function timeDate(){
     var time = new Date();
-    let daysList = ['Söndag', 'Måndag', 'Tisdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lördag'];
+    let daysList = ['söndag', 'måndag', 'tisdag', 'onsdag', 'torsdag', 'fredag', 'lördag'];
     let monthsList = ['januari', 'februari', 'mars', 'april', 'maj', 'juni', 'juli', 'augusti', 'september', 'oktober', 'november', 'december'];
 
     const timeDisplay = document.querySelector('.timeDispaly');
