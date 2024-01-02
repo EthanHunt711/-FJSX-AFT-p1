@@ -27,8 +27,7 @@ function getBackgound(){
 
     //fetch a random wallpaper
     fetch(unsplashApiUrl).then(response => response.json()).then(wallpaperData => { 
-        console.log(wallpaperData[1].urls.regular)
-        console.log(getRandomInt(wallpaperData.length))
+    
         //set up the original baclground
         var el = document.querySelector('#body');
         el.style.backgroundImage = `url(${wallpaperData[getRandomInt(wallpaperData.length)].urls.regular})`;
