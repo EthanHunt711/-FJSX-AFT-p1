@@ -18,7 +18,7 @@ function addToDoList(){
     timePoint.addEventListener('input', event =>{
         entryTime = timePoint.value;
     });
-    priorityNumber.addEventListener('input', event =>{
+    priorityNumber.addEventListener('change', event =>{
         entryPriority = priorityNumber.value;
         
     });
@@ -43,7 +43,7 @@ function addToDoList(){
         // table data 3
         const tableRowDataElement3 = document.createElement('td');
         tableRowDataElement1.id = 'tableRowDataElement3';
-        tableRowDataElement3.textContent = `${entryPriority}`
+        tableRowDataElement3.textContent = `${entryPriority}`;
         tableRowData.appendChild(tableRowDataElement3);
         
         agendaList.appendChild(tableRowData); 

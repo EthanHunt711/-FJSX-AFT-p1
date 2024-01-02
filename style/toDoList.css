@@ -1,6 +1,10 @@
 .agendaList{
     width: 90%;
 }
+
+.agendaList td{
+    padding: .3em;
+}
 .inputAgenda{
     display: flex;
     flex-direction: column;
@@ -32,6 +36,7 @@
     margin-top: 5px;
     font-size: 12px;
 }
+
 
 #tableRowDataElement1{
     width: 20%;
