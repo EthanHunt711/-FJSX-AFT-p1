@@ -34,11 +34,24 @@
     color: #000;
 }
 
-.insideDiv i{
+.insideDiv button i{
+    opacity: .2;
+    /* cursor: pointer; */
+}
+
+.insideDiv button{
+    border: none;
     margin-left: 150px;
     margin-top: -30px;
-    opacity: .2;
+    width: 20px;
     cursor: pointer;
+    border-radius: 50%;
+}
+
+.deleteIcon{
+    margin-top: -30px;
+    margin-left: .5em;
+    margin-right: .2em;
 }
 
 .addLink{
@@ -53,16 +66,13 @@
 
 }
 
-.addLink a{
-    text-decoration: none;
-    color: #000;
+.addLinkBtn{
+    border: none;
+    width: 20px;
+    cursor: pointer;
+    border-radius: 50%;
 }
 
-.deleteIcon{
-    margin-top: -30px;
-    margin-left: .5em;
-    margin-right: .2em;
-}
 
 .addLink i{
     opacity: .2;

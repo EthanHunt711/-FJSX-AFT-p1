@@ -25,7 +25,7 @@ function deleteQuickLink(){
     let delIcons = document.getElementsByClassName('deleteIcon');
     let linkListElemts = document.getElementsByClassName('linkListElemet');
 
-    for (let i = 0; i < delIcons.length; i++){
+    for (var i = 0; i < delIcons.length; i++){
         delIcons[i].addEventListener('click', event => {
             if(linkListElemts[i].style.dispaly === 'block'){
                 linkListElemts[i].style.display = 'none'
@@ -38,7 +38,7 @@ function deleteQuickLink(){
 
 
 function addQuickLinks(){
-    const addLink = document.querySelector('.addLink')
+    const addLink = document.querySelector('.addLinkBtn')
     addLink.addEventListener('click', event => {
         console.log('find me')
     })
