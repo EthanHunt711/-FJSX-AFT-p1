@@ -27,7 +27,6 @@ function userCurrentLocationfiveDayForecast(){
             //create a url for fetching 5day forecast 
             const weatherForecastUrl = `http://api.openweathermap.org/data/2.5/forecast?lat=${cityLatitude}&lon=${cityLongitude}&appid=${apiKey}&units=metric&lang=sv`
 
-            // console.log(weatherForecastUrl)
             //fetch the data for next 5 days
             fetch(weatherForecastUrl).then(res => res.json()).then(weatherDetailsData => {
                 const eachDayForecast = [];
@@ -36,15 +35,12 @@ function userCurrentLocationfiveDayForecast(){
                     const forecastDate = new Date(forecast.dt_txt).getDate();
                     if(!eachDayForecast.includes(forecastDate)){
                         return eachDayForecast.push(forecastDate)
-                    }
-                    
+                    };                    
                 });
 
-                // console.log(fiveDayForecast)
                 //add content to html
                 for(var i = 0; i < 3; i++){
-                    var weatherDetail = fiveDayForecast[i]
-                    // console.log(weatherDetail);
+                    var weatherDetail = fiveDayForecast[i];
 
                     //target the ul in html
                     const weatherTiles = document.querySelector('.weatherTiles');
@@ -76,10 +72,6 @@ function userCurrentLocationfiveDayForecast(){
                     weatherDetails.appendChild(showDayName);
 
 
-                    
-                    
-
-
 
                     const showWeatherDetails = document.createElement('div');
                     showWeatherDetails.className = 'showWeatherDetails';
@@ -87,52 +79,7 @@ function userCurrentLocationfiveDayForecast(){
                     <div class="details">${weatherDetail.weather[0].description}</div>`
                     weatherDetails.appendChild(showWeatherDetails)
 
-
-
-
                 };
-
-
-                // fiveDayForecast.forEach(weatherDataDeatils => {
-
-                //     // console.log(weatherDataDeatils.weather[0])
-                //     //target the ul in html
-                //     const weatherTiles = document.querySelector('.weatherTiles');
-
-                //     //create a list element
-                //     const weatherTile = document.createElement('li');
-                //     weatherTile.className = 'weatherTile';
-                //     weatherTiles.appendChild(weatherTile);
-                    
-                //     //create icon div
-                //     const weatherIcon = document.createElement('div');
-                //     weatherIcon.className = 'weatherIcon';
-                //     const weatherIconImg = document.createElement('img');
-                //     weatherIconImg.setAttribute('src', `https://openweathermap.org/img/wn/${weatherDataDeatils.weather[0].icon}@4x.png`)
-                //     weatherIcon.appendChild(weatherIconImg);
-                //     weatherTile.appendChild(weatherIcon);
-
-                //     //create details for weather list element
-                //     const weatherDetails = document.createElement('div');
-                //     weatherTile.appendChild(weatherDetails);
-
-                //     //date element
-                //     const showDayName = document.createElement('div');
-                //     showDayName.className ='showDayName'
-                //     showDayName.innerHTML = `<h6>${weatherDataDeatils.dt_txt.split(" ")[0]}</h6>`
-                //     weatherDetails.appendChild(showDayName);
-
-                //     const showWeatherDetails = document.createElement('div');
-                //     showWeatherDetails.className = 'showWeatherDetails';
-                //     showWeatherDetails.innerHTML= `<div class="temperature">${weatherDataDeatils.main.temp}°C</div>
-                //     <div class="details">${weatherDataDeatils.weather[0].description}</div>`
-                //     weatherDetails.appendChild(showWeatherDetails)
-
-
-
-
-
-                // });
 
 
 
@@ -151,8 +98,7 @@ function userCurrentLocationfiveDayForecast(){
         }
     }
     );
-    
-    
+        
 };
 
 userCurrentLocationfiveDayForecast();
