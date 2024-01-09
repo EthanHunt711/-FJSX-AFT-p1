@@ -8,7 +8,9 @@ button > i{
     align-items: center;
     overflow-y: scroll;
     border-top: solid 30px rgba(0, 0, 0, 0);
+    min-width: 300px;
 }
+
 .links::-webkit-scrollbar{
     display: none;
 }
@@ -20,8 +22,7 @@ button > i{
     width: 300px;
     height: 50px;
     align-items: center;
-
-    
+    box-shadow: 10px 10px 5px lightblue;
 }
 
 .insideDiv{
@@ -85,5 +86,62 @@ button > i{
 .addLink i{
     opacity: .2;
     cursor: pointer;
+    
+}
+
+/* POPUP WINDOW */
+.inputForm{
+    background: rgb(0, 0, 0, 0.3);
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    top: 170px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.popupWindow{
+    width: 270px;
+    height: 170px;
+    background: antiquewhite;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    text-align: center;
+}
+
+.inputForm img{
+    width: 30px;
+    height: 30px;
+}
+
+.inputForm input{
+    margin: 4px auto;
+    display: block;
+    width: 200px;
+    height: 25px;
+    padding: 1em;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+.inputForm .addLink{
+    margin-top: 0;
+    background: #fff;
+    width: 130px;
+   
+}
+
+.closeBtn{
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    
+   
     
 }
