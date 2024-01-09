@@ -61,17 +61,17 @@
                                 </li>
                             </ul>
                             <div class="addLink">
-                                <button class="addLinkBtn" onclick="addQuickLink()"><i class="fa-solid fa-circle-plus"></i></button>
+                                <button class="addLinkBtn" id="onPageAddBtn"><i class="fa-solid fa-circle-plus"></i></button>
                                 <p>Lägg till länk</p>
                             </div>
                             <div class="inputForm">
                                 <div class="popupWindow">
-                                    <img src="./icons/links/closepng.png" alt="close button" class="closeBtn">
+                                    <img src="./icons/links/closepng.png" alt="close button" class="closeBtn" id="closeBtnIcon">
                                     <img src="./icons/links/linkpng.png" alt="link">
-                                    <input type="text" placeholder="Google">
-                                    <input type="url" placeholder="https://www.google.com/">
+                                    <input type="text" placeholder="Google" id="linkName">
+                                    <input type="url" placeholder="https://www.google.com/" id="linkAddress">
                                     <div class="addLink">
-                                        <button class="addLinkBtn"><i class="fa-solid fa-circle-plus"></i></button>
+                                        <button class="addLinkBtn" onclick="addQuickLink()" id="offPageAddBtn"><i class="fa-solid fa-circle-plus"></i></button>
                                         <p>Lägg till länk</p>
                                     </div>
                                 </div>
