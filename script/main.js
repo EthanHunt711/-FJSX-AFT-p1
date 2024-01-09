@@ -79,11 +79,6 @@ function slideShow(){
 
 };
 
-const bb = document.querySelector('.titleText');
-let dd = window.getComputedStyle(bb).backgroundColor;
-console.log(dd);
-
-
 getBackgound();
 randomBackground();
 slideShow();
