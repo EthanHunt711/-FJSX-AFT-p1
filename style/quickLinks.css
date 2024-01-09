@@ -1,9 +1,17 @@
+button > i{
+    pointer-events: none;
+}
+
 .links{
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-y: scroll;
+    border-top: solid 30px rgba(0, 0, 0, 0);
 }
-
+.links::-webkit-scrollbar{
+    display: none;
+}
 
 .linkListElemet{
     background-color: antiquewhite;
