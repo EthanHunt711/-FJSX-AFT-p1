@@ -139,9 +139,10 @@ button > i{
     top: -15px;
     right: -15px;
     border-radius: 50%;
-    height: 20px;
+    
+
+}
+#closeBtnIcon{
     width: 20px;
-    
-   
-    
+    height: 20px;
 }
