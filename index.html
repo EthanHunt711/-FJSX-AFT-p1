@@ -31,38 +31,50 @@
                         <h2 class="tileTitleText">Snabblänkar</h2>
                         <div class="links">
                             <ul class="linkList">
-                                <li class="linkListElemet">
+                                <li class="linkListElemet" id="insideDiv1">
                                     <div class="insideDiv">
                                         <a class="favIcon" href="https://www.google.com/"><img src="./icons/links/icons8-google.svg" alt="Google Icon"></a>
                                         <a class="favText" href="https://www.google.com/">Google</a>
-                                        <button class="deleteIcon"><i class="fa-solid fa-circle-minus"></i></button>
+                                        <button class="deleteIcon" id="insideDiv1Del"><i class="fa-solid fa-circle-minus"></i></button>
                                     </div>
                                 </li>
-                                <li class="linkListElemet">
+                                <li class="linkListElemet" id="insideDiv2">
                                     <div class="insideDiv">
                                         <a class="favIcon" href="https://www.github.com/"><img src="./icons/links/icons8-github.svg" alt="Google Icon"></a>
                                         <a class="favText" href="https://www.github.com/">GitHub</a>
-                                        <button class="deleteIcon"><i class="fa-solid fa-circle-minus"></i></button>
+                                        <button class="deleteIcon" id="insideDiv2Del"><i class="fa-solid fa-circle-minus"></i></button>
                                     </div>
                                 </li>
-                                <li class="linkListElemet">
+                                <li class="linkListElemet" id="insideDiv3">
                                     <div class="insideDiv">
                                         <a class="favIcon" href="https://www.notion.so/"><img src="./icons/links/icons8-notion.svg" alt="Google Icon"></a>
                                         <a class="favText" href="https://www.notion.so/">Notion</a>
-                                        <button class="deleteIcon"><i class="fa-solid fa-circle-minus"></i></button>
+                                        <button class="deleteIcon" id="insideDiv3Del"><i class="fa-solid fa-circle-minus"></i></button>
                                     </div>
                                 </li>
-                                <li class="linkListElemet">
+                                <li class="linkListElemet" id="insideDiv4">
                                     <div class="insideDiv">
                                         <a class="favIcon" href="https://www.linkedin.com/"><img src="./icons/links/icons8-linkedin.svg" alt="Google Icon"></a>
                                         <a class="favText" href="https://www.linkedin.com/">LinkedIn</a>
-                                        <button class="deleteIcon"><i class="fa-solid fa-circle-minus"></i></button>
+                                        <button class="deleteIcon" id="insideDiv4Del"><i class="fa-solid fa-circle-minus"></i></button>
                                     </div>
                                 </li>
                             </ul>
                             <div class="addLink">
-                                <button class="addLinkBtn"><i class="fa-solid fa-circle-plus"></i></button>
+                                <button class="addLinkBtn" onclick="addQuickLink()"><i class="fa-solid fa-circle-plus"></i></button>
                                 <p>Lägg till länk</p>
+                            </div>
+                            <div class="inputForm">
+                                <div class="popupWindow">
+                                    <img src="./icons/links/closepng.png" alt="close button" class="closeBtn">
+                                    <img src="./icons/links/linkpng.png" alt="link">
+                                    <input type="text" placeholder="Google">
+                                    <input type="url" placeholder="https://www.google.com/">
+                                    <div class="addLink">
+                                        <button class="addLinkBtn"><i class="fa-solid fa-circle-plus"></i></button>
+                                        <p>Lägg till länk</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>
