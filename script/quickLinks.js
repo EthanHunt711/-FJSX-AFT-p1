@@ -10,7 +10,9 @@ links.addEventListener('click', function(evt){
     let id = evt.target.id;
     let divId = id.slice(0, id.length-3);
     document.getElementById(divId).remove();
+    localStorage.currentList = document.querySelector('.links').innerHTML;
 });
+
 //add event for opening the popup
 document.querySelector('#onPageAddBtn').addEventListener('click', event => {
     document.querySelector('.inputForm').style.display = 'flex';
@@ -40,6 +42,7 @@ function addQuickLink(){
         </li>`;
     //adding to the existing list
     document.querySelector('.linkList').innerHTML += newLink;
+    
 };
 
 //add event for closing popup and resetting form
@@ -47,4 +50,8 @@ document.querySelector('#closeBtnIcon').addEventListener('click', event => {
     document.querySelector('.inputForm').style.display = 'none';
     document.querySelector('#linkName').value = "";
     document.querySelector('#linkAddress').value = "";
+    localStorage.currentList = document.querySelector('.links').innerHTML;
 });
+
+if(localStorage.currentList.length > 0)
+    document.querySelector('.links').innerHTML = localStorage.currentList;
