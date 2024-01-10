@@ -19,7 +19,7 @@ button > i{
     background-color: antiquewhite;
     margin-top: 1em;
     border-radius: 6px;
-    width: 300px;
+    width: 270px;
     height: 50px;
     align-items: center;
     box-shadow: 10px 10px 5px lightblue;
@@ -50,7 +50,7 @@ button > i{
 
 .insideDiv button{
     border: none;
-    margin-left: 150px;
+    margin-left: 130px;
     margin-top: -30px;
     width: 20px;
     cursor: pointer;
