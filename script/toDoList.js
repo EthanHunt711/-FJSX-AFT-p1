@@ -31,9 +31,10 @@ function addToDoList(){
     });
 
     addBtn.addEventListener('click', event => {
-        
+        if (entryTime != undefined && entryText != undefined && entryText != undefined){
         //table 
         const tableRowData = document.createElement('tr');
+        tableRowData.className = 'tableRow';
         // table data 1
         const tableRowDataElement1 = document.createElement('td');
         tableRowDataElement1.id = 'tableRowDataElement1';
@@ -58,15 +59,15 @@ function addToDoList(){
         document.querySelector('.inputAgenda').style.display = 'none';
         addBtnOn.style.display = 'flex';
 
+        };
         localStorage.dailySchedule = document.querySelector('.agendaList').innerHTML;
-
     });
 
     
 };
 
+addToDoList();
 
 if(localStorage.dailySchedule.length > 0)
     document.querySelector('.agendaList').innerHTML = localStorage.dailySchedule;
 
-addToDoList();
