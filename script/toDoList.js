@@ -2,19 +2,23 @@
 const timePoint = document.querySelector('#date');
 const priorityNumber = document.querySelector('#priority');
 const agendaSubject = document.querySelector('#toDo');
-const addBtn = document.querySelector('#formBtn');
+const addBtnOn = document.querySelector('#onPageFormBtn');
+const addBtn = document.querySelector('#offPageFormBtn');
 const agendaList = document.querySelector('.agendaList')
 
+addBtnOn.addEventListener('click', event =>{
+    document.querySelector('.inputAgenda').style.display = 'flex';
+    addBtnOn.style.display = 'none';
+});
 
 //function to add to the ordered list
 function addToDoList(){
     
-    //array for saving the inputs as sorted
-    // var toDoListElemets = new Map();
-    //make an 
+    //variabes
     let entryTime;
     let entryText;
     let entryPriority;
+
     timePoint.addEventListener('input', event =>{
         entryTime = timePoint.value;
     });
@@ -50,9 +54,19 @@ function addToDoList(){
 
         timePoint.value = "";
         agendaSubject.value = " ";
+
+        document.querySelector('.inputAgenda').style.display = 'none';
+        addBtnOn.style.display = 'flex';
+
+        localStorage.dailySchedule = document.querySelector('.agendaList').innerHTML;
+
     });
 
     
 };
+
+
+if(localStorage.dailySchedule.length > 0)
+    document.querySelector('.agendaList').innerHTML = localStorage.dailySchedule;
 
 addToDoList();
