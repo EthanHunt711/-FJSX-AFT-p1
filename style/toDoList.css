@@ -1,12 +1,13 @@
 .agendaList{
     width: 90%;
+    min-width: 300px;
 }
 
 .agendaList td{
     padding: .3em;
 }
 .inputAgenda{
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     width: 300px;
