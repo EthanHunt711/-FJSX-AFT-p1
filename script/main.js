@@ -79,6 +79,24 @@ function slideShow(){
 
 };
 
+function addToLocalStorage(userValue){
+    localStorage.setItem('dashboradName', userValue)
+}
+
+const profileIcon = document.querySelector('#profileBtn')
+profileIcon.addEventListener('click', event => {
+    console.log('yes')
+    document.querySelector('#proflieName').style.display = 'block';
+    document.querySelector('#setProfileNameBtn').style.display = 'block';
+    profileIcon.style.opacity = 1;
+});
+
+
+let userName = document.querySelector('#profileName').addEventListener('input', (e)=> console.log(e.target.value))
+document.querySelector('#setProfileNameBtn').addEventListener('click', event =>{
+    console.log(userName);
+});
+
 getBackgound();
 randomBackground();
 slideShow();
