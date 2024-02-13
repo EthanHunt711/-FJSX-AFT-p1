@@ -91,11 +91,24 @@ profileIcon.addEventListener('click', event => {
     profileIcon.style.opacity = 1;
 });
 
+let userNameInput = document.querySelector('#proflieName');
+let userName;
 
-let userName = document.querySelector('#profileName').addEventListener('input', (e)=> console.log(e.target.value))
+userNameInput.addEventListener('input', event => {
+    userName = userNameInput.value;
+})
+
+
 document.querySelector('#setProfileNameBtn').addEventListener('click', event =>{
-    console.log(userName);
+    addToLocalStorage(userName);
+    document.querySelector('#dashTitle').innerHTML = `${localStorage.getItem('dashboradName')}'s Dashboard`;
+    document.querySelector('#proflieName').style.display = 'none';
+    document.querySelector('#setProfileNameBtn').style.display = 'none';
+    profileIcon.style.opacity = 0.2;
+
 });
+
+document.querySelector('#dashTitle').innerHTML = `${localStorage.getItem('dashboradName')}'s Dashboard`
 
 getBackgound();
 randomBackground();
