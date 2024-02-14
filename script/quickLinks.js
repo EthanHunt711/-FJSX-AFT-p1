@@ -15,6 +15,7 @@ links.addEventListener('click', function(evt){
 
 //add event for opening the popup
 document.querySelector('#onPageAddBtn').addEventListener('click', event => {
+    console.log('yes')
     document.querySelector('.inputForm').style.display = 'flex';
 });
 
