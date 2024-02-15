@@ -1,6 +1,6 @@
 # Dashboard
 
-The personal dashboard is a class assignment which is to display a series of important daily information such as usefull links, weather, national news headlines.
+The personal dashboard is a class assignment which is to display a series of important daily information such as usefull links, weather, national news headlines. There is a special icon on the right top of the page for changing the name of the Dashborad for more personal interchange.
 
 ## Quick Links
 
