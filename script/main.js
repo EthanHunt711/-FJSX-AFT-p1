@@ -104,7 +104,7 @@ document.querySelector('#setProfileNameBtn').addEventListener('click', event =>{
     document.querySelector('#dashTitle').innerHTML = `${localStorage.getItem('dashboradName')}'s Dashboard`;
     document.querySelector('#proflieName').style.display = 'none';
     document.querySelector('#setProfileNameBtn').style.display = 'none';
-    profileIcon.style.opacity = 0.2;
+    profileIcon.style.opacity = 0.4;
 
 });
 
