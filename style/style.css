@@ -21,7 +21,7 @@
 
 /* Header style */
 header{
-    margin: 60px auto 0;
+    margin: 75px auto 0;
     background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
     width: 360px;
     height: 40px;
@@ -60,7 +60,7 @@ main{
     right: 20px;
     width: 50px;
     height: 50px;
-    opacity: 0.2;
+    opacity: 0.4;
     background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
     border-radius: 4px;
     cursor: pointer;
